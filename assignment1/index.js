@@ -1,6 +1,6 @@
 //1.Create a simple profile using variables to store a person’s name, age, job, and a fun fact.
 
-const fullName = "Anisa";
+const fullName = "Anisa Berjani";
 let age = 22;
 let job = "Web Developer";
 const funFact = "First class with react";
