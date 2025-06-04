@@ -44,4 +44,70 @@ favouriteDrink = "Sprite";
 
 console.log(`My favourite drink now is ${favouriteDrink}`)
 
+//---------------Types in Javascript-----------------
+
+//1.Write a program that demonstrates string concatenation and type coercion in
+// JavaScript. Start by creating variables with different data types, including strings and
+// numbers. Then, try to combine them in different ways using both the + operator and
+// template literals.
+
+const academy = "Frontend"
+const duration = 9
+const certification = true
+const rating = 4.9
+
+const plusOperator = "Academy: " + academy + ", duration: " + duration + "months, Certification: " + certification + ", Rating: " + rating;
+console.log('Using + operator :',plusOperator)
+
+const tempLiterals = `Academy: ${academy} with a duration of ${duration} months, with a certification ${certification}, has a rating of ${rating}`;
+console.log(`Using template literals : ${tempLiterals}`)
+
+//coercion examples
+console.log("5" + 5)
+console.log(10 + 5 + " apples")
+
+
+// Create a program that performs different operations on various data types. Experiment
+// with how JavaScript handles arithmetic, string concatenation, and boolean logic when
+// working with different types of values. You can also demonstrate what happens when
+// you try to add or subtract values of incompatible types.
+
+let a = 7
+let b = 3
+
+//Arithmetic
+console.log("a + b =", a + b);     
+console.log("a - b =", a - b);     
+console.log("a * b =", a * b);     
+console.log("a / b =", a / b);   
+
+let firstName = "Anisa"
+let lastName = "Berjani"
+
+console.log("Full Name:", firstName + " " + lastName);
+
+//String + number
+console.log("Age: " + 20);      
+console.log(20 + " years old");
+
+//Number + boolean
+console.log(1 + true);  
+console.log(5 + false); 
+
+let isStudent = true;
+let isTeacher = false;
+
+//Boolean
+console.log('isStudent && isTeacher', isStudent && isTeacher)
+console.log('isStudent || isTeacher', isStudent || isTeacher)
+console.log('!isStudent', !isStudent)
+
+//extras
+console.log("10" - 5); 
+console.log("10" + 5);           
+console.log("hello" - 3);        
+console.log(true + "test");      
+console.log(undefined + 1);      
+console.log(null + 1);
+
 
