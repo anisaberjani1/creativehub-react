@@ -67,7 +67,7 @@ console.log("5" + 5)
 console.log(10 + 5 + " apples")
 
 
-// Create a program that performs different operations on various data types. Experiment
+//2.Create a program that performs different operations on various data types. Experiment
 // with how JavaScript handles arithmetic, string concatenation, and boolean logic when
 // working with different types of values. You can also demonstrate what happens when
 // you try to add or subtract values of incompatible types.
@@ -109,5 +109,97 @@ console.log("hello" - 3);
 console.log(true + "test");      
 console.log(undefined + 1);      
 console.log(null + 1);
+
+//---------- Conditonals and Operators in Javascript ------------
+
+// 1. Write a program that checks whether a person is old enough to vote. Use an if-else
+// statement to compare the person's age with the voting age (18). Depending on the
+// result, print whether the person is eligible to vote or not.
+
+const personAge = 19
+
+if(personAge >= 18){
+    console.log('You are eligible to vote')
+}else{
+    console.log('You are not eligible to vote')
+}
+
+// 2. Write a program that checks a student’s grade and assigns a letter grade based on their
+// score using if, else if, and else. Students should input their score, and the
+// program will output the corresponding grade.
+
+const studentScore = 88
+
+if(studentScore>= 90 && studentScore<=100){
+    console.log(`Score is ${studentScore} and the grade is A`)
+}
+else if(studentScore>= 80 && studentScore<=89){
+    console.log(`Score is ${studentScore} and the grade is B`)
+}
+else if(studentScore>= 70 && studentScore<=79){
+    console.log(`Score is ${studentScore} and the grade is C`)
+}
+else if(studentScore>= 60 && studentScore<=69){
+    console.log(`Score is ${studentScore} and the grade is D`)
+}
+else if(studentScore>= 50 && studentScore<=59){
+    console.log(`Score is ${studentScore} and the grade is E`)
+}else{
+    console.log(`Grade F`)
+}
+
+// 3. Write a program that determines if a person is eligible for a driving license. First,
+// check if the person is old enough (18 or older). If they are, check if they passed a
+// driving test. Use nested conditionals (if inside another if) to handle this scenario.
+
+if(personAge >= 18){
+    const drivingTest = true;
+    if(drivingTest){
+        console.log(`Person of age ${personAge} has passed the driving test`)
+    }else{
+        console.log(`Person of age ${personAge} has not passed the driving test`)        
+    }
+}else{
+    console.log('Person is not eligible for a driving license')
+}
+
+// 4. Create a program that asks for the day of the week and prints whether it's a weekday
+// or the weekend using a switch statement.
+const day = 'Saturday'
+
+switch (day) {
+    case 'Monday':
+    case 'Tuesday':
+    case 'Wednesday':
+    case 'Thursday':
+    case 'Friday':
+        console.log(`${day} is a weekday`)
+        break;
+    case 'Saturday':
+    case 'Sunday':
+        console.log(`${day} is the weekend`)
+        break;
+    default:
+        console.log(`${day} is not a valid day`)
+        break;
+}
+
+// 5. Write a program that assigns roles based on a person's input. Use a switch statement
+// to assign a role to a user (e.g., "admin", "editor", "viewer"). Include a default case for
+// any invalid role input.
+
+const userRole = 'viewer';
+
+switch (userRole.toLowerCase()) {
+    case 'admin':
+    case 'editor':
+    case 'viewer':
+        console.log(`User has ${userRole} privileges`)
+        break;
+    default:
+        console.log('Invalid role')
+        break;
+}
+
 
 
