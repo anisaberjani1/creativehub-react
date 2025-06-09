@@ -236,4 +236,141 @@ for(let i=1; i<=50; i++){
     }
 }
 
+//------------------Functions-----------------------
 
+// 1. Create a simple function called greet that prints a welcome message to the console.
+// Then, call the function multiple times to demonstrate how functions can be reused.
+
+function greet(){
+    console.log('Welcome from the greet function')
+}
+
+greet()
+greet()
+greet()
+
+// 2. Write a function called multiply that takes two parameters (numbers) and prints their
+// product. Call the function with different arguments to show how parameters work.
+
+function multiply(num1,num2){
+    const product  = num1 * num2;
+
+    return product
+}
+console.log(multiply(3,5))
+console.log(multiply(5,7))
+console.log(multiply(8,9))
+
+// 3. Write a function called add that accepts two parameters, calculates their sum, and
+// returns the result. Call the function and store the return value in a variable to
+// demonstrate the difference between returning and non-returning functions.
+
+function add(num1,num2){
+    const sum = num1+num2;
+    return sum
+}
+//non-returning function
+add(2,3)
+//returning a function
+const sum = add(2,4)
+console.log(`Returned sum: ${sum}`)
+
+
+// 4. Write two functions: one that simply prints the result of multiplying two numbers, and
+// another that returns the result of multiplying two numbers. Call both functions and
+// explain the difference between returning a value and just printing it.
+
+function printMultiply(num1,num2){
+    console.log(`Multiplying two numbers: ${num1 * num2}`)
+}
+function returnMultiply(num1,num2){
+    return num1 * num2
+}
+
+//Printing the result
+printMultiply(3,5)
+
+//Returning the result
+const result = returnMultiply(2,3)
+console.log(`Returning the multiply result: ${result}`);
+
+// 5. Convert a regular function into an arrow function. Write a function called square that
+// accepts a number and returns its square. First, write it as a regular function, then
+// convert it to an arrow function
+
+function square(number){
+    return number*number
+}
+
+const squareArrowFunc = (number) => {
+    return number * number
+}
+
+console.log(`Regular function: ${square(4)}`)
+console.log(`Arrow function: ${squareArrowFunc(5)}`)
+
+// 6. Write a function called greetUser that accepts two parameters: name and greeting. Set
+// the greeting parameter to a default value of "Hello" if it is not provided. Demonstrate
+// how default parameters work by calling the function with and without passing the
+// greeting argument.
+
+function greetUser(name,greeting="Hello"){
+    console.log(`Hi ${name}, ${greeting} and Welcome!`)
+}
+
+greetUser("Anisa")
+greetUser("Anisa","Greetings")
+
+// 7. Write a function called calculateTotalPrice that takes two parameters: price and
+// quantity. The function should return the total price by multiplying these values. Then,
+// call the function with different numbers to see how multiple arguments work.
+
+function calculateTotalPrice(price,quantity){
+    const totalPrice = price * quantity;
+    return totalPrice;
+}
+
+console.log(`The total price is ${calculateTotalPrice(5,6)}`)
+console.log(`The total price is ${calculateTotalPrice(7.4,2)}`)
+
+// 8. Create an anonymous function that adds two numbers, and assign it to a variable
+// called sum. Then, convert it into an arrow function. This will help students understand
+// the difference between anonymous functions and arrow functions.
+
+const sumAnonymous = function(num1,num2){
+    return num1 + num2;
+}
+
+console.log(sumAnonymous(3,4))
+
+const sumArrowFunction = (num1,num2) => num1 + num2
+
+console.log(sumArrowFunction(4,4))
+
+// 9. Write a function called gradeCalculator that accepts a score and returns a grade based
+// on the score. The function should return different grades based on score ranges using
+// multiple return statements.
+
+function gradeCalculator(score){
+    if(score >= 90 && score<=100){
+        return 'A'
+    }else if(score>=80 && score<= 89){
+        return 'B'
+    }
+    else if(score>=70 && score<= 79){
+        return 'C'
+    }
+    else if(score>=60 && score<= 69){
+        return 'D'
+    }
+    else if(score>=50 && score<= 59){
+        return 'E'
+    }
+    else if(score>=0 && score<= 49){
+        return 'F'
+    }else{
+        return 'Write a score from 0-100'
+    }
+}
+
+console.log(gradeCalculator(2))
