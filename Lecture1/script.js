@@ -374,3 +374,87 @@ function gradeCalculator(score){
 }
 
 console.log(gradeCalculator(2))
+
+//---------------------Callbacks----------------------
+
+// 1. Write a simple function called processData that accepts another function (a callback)
+// as an argument. The processData function should call the callback function after it
+// prints "Processing data...".
+
+function processData(callback){
+    console.log('Processing data...')
+    callback()
+}
+
+function afterProcessingData(){
+    console.log('Data processed successfully!')
+}
+
+processData(afterProcessingData)
+
+// 2. Create a function called calculate that accepts two numbers and a callback function.
+// The callback function should handle different operations (such as adding, subtracting,
+// or multiplying the numbers). Use this pattern to demonstrate how callbacks can
+// handle dynamic functionality.
+
+function calculate(num1,num2, callback){
+    return callback(num1,num2)
+}
+
+function add(a,b){
+    return a+b
+}
+
+function substract(a,b){
+    return a-b
+}
+
+function multiply2(a,b){
+    return a*b
+}
+
+console.log('Add function: ', calculate(7,3,add))
+console.log('Substract function: ', calculate(7,3,substract))
+console.log('Multiply function: ', calculate(7,3,multiply2))
+
+// 3. Write a function called delayedMessage that uses the setTimeout function to simulate
+// a delay. The function should accept a message and a callback function. After a delay
+// of 2 seconds, it should call the callback and print the message.
+
+function delayedMessage(message, callback){
+    setTimeout(() => {
+        console.log(message);
+        callback();
+    },2000)
+}
+
+function afterMessage(){
+    console.log('After the delay')
+}
+
+delayedMessage("This message is delayed by 2 seconds", afterMessage)
+
+// 4. Create a function fetchData that simulates fetching data from a server using a callback
+// for success and another callback for failure. The function should randomly decide
+// whether the request is successful or not, calling the appropriate callback.
+
+function fetchData(onSuccess, onFailure) {
+    setTimeout(() => {
+        const success = Math.random() > 0.5; 
+
+        if (success) {
+            onSuccess({ data: "Here is your data!" });
+        } else {
+            onFailure("Failed to fetch data.");
+        }
+    }, 1000);
+}
+
+function handleSuccess(response) {
+    console.log("Success:", response.data);
+}
+function handleFailure(error) {
+    console.log("Error:", error);
+}
+
+fetchData(handleSuccess, handleFailure);
