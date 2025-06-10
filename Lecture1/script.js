@@ -534,5 +534,69 @@ console.log('Removing the middle item', cities)
 const addTwoItems = cities.splice(2,0, "Berat", "Saranda")
 console.log('Adding two elements', cities)
 
+//---------------------Objects------------------------------------
 
+// 1. Write a program that creates an object to represent a car. The object should have
+// properties for make, model, and year. Print the object to the console.
 
+const car = {
+    make: "Audi",
+    model: "A3",
+    year: 2021,
+}
+
+console.log('Car object: ',car)
+
+// 2. Using the car object you created, write a program that prints the value of the model
+// and year properties using both dot notation and bracket notation.
+
+console.log(`The model of the car is: ${car.model} and its year is ${car["year"]}`)
+
+// 3. Write a program that adds a new property color to the car object and then removes the
+// year property. Print the object after each operation.
+
+car.color = "Blue"
+console.log('Car with the new property',car)
+
+delete car.year;
+console.log('Car without the year property',car)
+
+// 4. Extend the car object by adding a method called getCarInfo that returns a string
+// containing the car’s make and model. Call this method and print the result.
+
+car.getCarInfo = function(){
+    return `The car's make is: ${car.make} and the model is: ${car.model}`;
+}
+
+console.log(car.getCarInfo())
+
+// 5. Write a program that creates an object to represent a person. The person object should
+// have properties for name, age, and an address object. The address object should have
+// properties for street, city, and country. Access and print the street and country of the
+// person's address.
+
+const personObj = {
+    name: 'John',
+    age: 19,
+    address: {
+        street: 'Bond Street',
+        city: 'London',
+        country: 'England'
+    }
+}
+
+console.log(`The person's street is ${personObj.address.street} and it is in ${personObj.address["country"]}`)
+
+// 6. Write a program that creates a student object with properties for name, age, and an
+// array of grades. Print the student's average grade
+
+const student = {
+    name: 'Student',
+    age: 19,
+    grades: [8,9,10,9,7]
+}
+
+const sumGrades = student.grades.reduce((acc,value) => acc + value,0);
+const average = sumGrades / student.grades.length;
+
+console.log(`The student's average grade is: ${average}`)
