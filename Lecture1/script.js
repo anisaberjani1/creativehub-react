@@ -458,3 +458,81 @@ function handleFailure(error) {
 }
 
 fetchData(handleSuccess, handleFailure);
+
+//---------------Arrays-------------------
+
+// 1. Write a program that creates an array of your favorite fruits. Then, print the first and
+// last fruit in the array.
+
+const fruits = ["strawberries", "bananas", "apples", "blueberries","peaches"];
+console.log(`The first fruit of the array is ${fruits[0]} and the last fruit in the array is ${fruits[fruits.length-1]}`)
+
+// 2. Write a program that adds a new fruit to the beginning and the end of an array of
+// fruits. Then, remove a fruit from the beginning and end.
+
+// Add to beginning and end
+fruits.unshift("oranges"); 
+fruits.push("cherries"); 
+
+console.log("After adding to beginning and end:", fruits);
+
+// Remove from beginning and end
+fruits.shift(); 
+fruits.pop(); 
+
+console.log("After removing from beginning and end:", fruits);
+
+// 3. Create a program that loops through an array of numbers using a for loop and prints
+// only the even numbers.
+
+const numbers = [2,3,4,5,6,7,8,9]
+
+for(let i=0; i< numbers.length; i++){
+    if(numbers[i] % 2 == 0){
+        console.log(numbers[i])
+    }
+}
+
+// 4. Write a program that creates a new array where each number in the original array is
+// multiplied by 2.
+
+const multipliedBy2 = numbers.map(num => num*2)
+
+console.log("Multiplied by 2: ", multipliedBy2)
+
+// 5. Write a program that filters an array of numbers to create a new array that contains
+// only numbers greater than 5.
+
+const numsGreaterThan5 = numbers.filter(num => num > 5)
+console.log("Numbers greater than 5: ", numsGreaterThan5)
+
+// 6. Create a program that finds the first number in an array that is divisible by 3.
+
+const firstNumDivisibleBy3 = numbers.find(num => num % 3 === 0)
+
+console.log("First number divisible by 3 in the array", firstNumDivisibleBy3)
+
+// 7. Write a program that sorts an array of numbers in ascending order using the sort
+// method. Then, reverse the order using the reverse method.
+
+const sortAsc = numbers.sort((a,b) => a - b)
+console.log('Sorted array: ', sortAsc)
+
+const reverseOrder = numbers.reverse();
+console.log('Reversed array: ', reverseOrder)
+
+// 8. Write a program that loops through an array of cities and prints each city name.
+
+const cities = ['Prishtina', 'Prizren', 'Tirana', 'Vlora', 'Shkodra']
+cities.forEach(city => console.log(city))
+
+// 9. Write a program that removes two elements from the middle of an array. Then, insert
+// two new elements into the array at the same position.
+
+const removeItem = cities.splice(2,1)
+console.log('Removing the middle item', cities)
+const addTwoItems = cities.splice(2,0, "Berat", "Saranda")
+console.log('Adding two elements', cities)
+
+
+
