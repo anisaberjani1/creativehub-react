@@ -1,0 +1,7 @@
+.news-content{
+    background-color: rgb(216, 215, 215);
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    padding: 3em 0;
+}
