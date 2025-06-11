@@ -1,0 +1,18 @@
+.hero-content{
+    background-image: url('../../assets/bg1.jpg');
+    background-position: left;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-title{
+    font-size: 3rem;
+}
+
+.hero-description{
+    width: 50%;
+    line-height: 2em;
+}
