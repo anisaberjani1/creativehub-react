@@ -1,0 +1,36 @@
+.footer {
+  background-color: rgb(29, 46, 59);
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  text-align: start;
+  padding: 1rem;
+}
+
+.footer-title {
+  text-transform: uppercase;
+  border-bottom: 2px solid white;
+  width: fit-content;
+  padding: 0.7em 0;
+}
+
+.footer-form-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+}
+
+.footer-input {
+  background-color: rgb(8, 26, 39);
+  border: none;
+  padding: 1em 1.5em;
+}
+
+.contact-info {
+  line-height: 1.5em;
+}
+
+.footer-logo {
+  border: 1px solid white;
+  padding: 0.4em;
+}
