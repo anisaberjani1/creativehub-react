@@ -1,0 +1,97 @@
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(200px, auto);
+  gap: 20px;
+  padding: 40px;
+}
+
+.feature {
+  border-radius: 16px;
+  padding: 24px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.feature h4 {
+  font-size: 12px;
+  text-transform: uppercase;
+  opacity: 0.85;
+  margin-bottom: 8px;
+}
+
+.feature h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.card-description {
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 16px;
+}
+
+.card-btn {
+  background: none;
+  color: white;
+  font-size: 14px;
+  width: fit-content;
+  border: none;
+  cursor: pointer;
+}
+
+.feature-one {
+  background-color: #3b6efb;
+}
+
+.feature-two {
+  background-color: #e42414;
+}
+
+.feature-three {
+  background-color: #8611e0;
+}
+
+.feature-four {
+  background: linear-gradient(135deg, #f857a6 0%, #ff5858 100%);
+  grid-column: 1 / 3;
+}
+
+.feature-five {
+  background-color: #000000;
+  grid-column: 3 / 4;
+}
+
+.feature-six {
+  background-color: #eeeeee;
+  color: black;
+}
+
+.feature-seven {
+  background-color: #9376ff;
+}
+
+.feature-six button,
+.feature-eight button{
+    color: #000000;
+}
+
+.feature-eight {
+  background-color: #eeeeee;
+  color: black;
+  font-size: 14px;
+  padding: 24px;
+  border-radius: 16px;
+}
+
+
+.card-info {
+  margin-bottom: 20px;
+}
+
+.card-content-title {
+  margin-top: 16px;
+  font-weight: bold;
+}
