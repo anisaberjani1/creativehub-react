@@ -1,0 +1,11 @@
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-link{
+    color: #0067b8;
+    font-weight: bold;
+}

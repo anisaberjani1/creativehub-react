@@ -1,0 +1,10 @@
+.business-container{
+    padding: 1em 3em;
+}
+
+.business-cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 2em;
+}
