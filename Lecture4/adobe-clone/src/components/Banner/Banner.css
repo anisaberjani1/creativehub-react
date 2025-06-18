@@ -1,0 +1,43 @@
+.banner {
+  background: #b40b00;
+  background: linear-gradient(
+    90deg,
+    rgba(180, 11, 0, 1) 47%,
+    rgba(254, 115, 96, 1) 100%
+  );
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  padding: 0 8em;
+}
+
+.banner-content{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.banner-title{
+    font-size: 2.8em;
+}
+
+.banner-description{
+    font-size: 1.5em;
+    width: 80%;
+}
+
+.banner-btn{
+    background-color: #3b63fb;
+    border: none;
+    font-size: 1em;
+    padding: 1em 1.5em;
+    border-radius: 2em;
+    color: white;
+    font-weight: bold;
+}
+
+.banner-image{
+    flex: 0;
+}
