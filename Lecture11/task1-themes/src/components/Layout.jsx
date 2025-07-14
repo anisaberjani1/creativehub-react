@@ -1,11 +1,11 @@
 import React from 'react'
 import Header from './Header'
 
-const Layout = ({theme, toggleTheme}) => {
+const Layout = () => {
   return (
-    <div className='p-8'>
-        <Header theme={theme} toggleTheme={toggleTheme}/>
-    </div>
+    <main className='p-8'>
+        <Header/>
+    </main>
   )
 }
 

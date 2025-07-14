@@ -1,13 +1,12 @@
-import React from 'react'
-import ThemeButton from './ThemeButton'
+import ThemeButton from "./ThemeButton";
 
-const Header = ({theme, toggleTheme}) => {
+const Header = () => {
   return (
-    <div className='flex justify-between items-center'>
-        <h1 className='text-2xl font-bold'>My Theme App</h1>
-        <ThemeButton theme={theme} toggleTheme={toggleTheme}/>
+    <div className="flex justify-between items-center">
+      <h1 className="text-2xl font-bold">Theme App</h1>
+      <ThemeButton />
     </div>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

@@ -1,17 +1,27 @@
-import { useState } from "react"
-import Layout from "./components/Layout"
+import Layout from "./components/Layout";
+import { ThemeProvider, useTheme } from "./context/ThemeContext";
 
-function App() {
-  const [theme,setTheme] = useState("light")
-
-  const toggleTheme = () => {
-    setTheme(prev => (prev === 'light' ? 'dark': 'light'))
-  }
+const AppWrapper = () => {
+  const { theme } = useTheme();
   return (
-    <div className={theme === 'light' ? 'bg-white text-black min-h-screen': 'bg-black text-white min-h-screen'}>
-      <Layout theme={theme} toggleTheme={toggleTheme}/>
+    <div
+      className={
+        theme === "light"
+          ? "bg-white text-black min-h-screen"
+          : "bg-black text-white min-h-screen"
+      }
+    >
+      <Layout />
     </div>
-  )
-}
+  );
+};
 
-export default App
+const App = () => {
+  return (
+    <ThemeProvider>
+      <AppWrapper />
+    </ThemeProvider>
+  );
+};
+
+export default App;
